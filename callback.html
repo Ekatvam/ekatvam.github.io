@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Auth Callback</title>
+</head>
+<body>
+    <script>
+        // Extract auth code and redirect to your app
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        
+        if (code) {
+            // Redirect to your app with the auth code
+            window.location.href = `InView://instagram/callback?code=${code}`;
+        }
+    </script>
+    <p>Redirecting to InView app...</p>
+</body>
+</html>
